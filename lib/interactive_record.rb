@@ -53,7 +53,7 @@ class InteractiveRecord
       value = "'#{param.values[0]}'"
     end
     sql = "SELECT * FROM #{self.table_name} WHERE (#{param.keys[0].to_s}) = (#{value})"
-# binding.pry
+binding.pry
     test = DB[:conn].execute(sql)
 
   end
