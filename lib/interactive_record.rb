@@ -47,9 +47,9 @@ class InteractiveRecord
 
   def self.find_by(param)
     # binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE (#{param.keys.to_s.gsub(":", "")}) = (#{param.values.join})"
+    sql = "SELECT * FROM #{self.table_name} WHERE (#{param.keys[0].to_s}) = (#{param.values.join})"
     DB[:conn].execute(sql)
-binding.pry
+
   end
 
 end
