@@ -47,8 +47,13 @@ class InteractiveRecord
 
   def self.find_by(param)
     # binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE (#{param.keys[0].to_s}) = (#{param.values.join})"
-binding.pry
+    if param.values[0].class == Integer
+      value = param.values[0]
+    else
+      value = "'#{param.values[0]}'"
+    end
+    sql = "SELECT * FROM #{self.table_name} WHERE (#{param.keys[0].to_s}) = (#{value})"
+# binding.pry
     test = DB[:conn].execute(sql)
 
   end
