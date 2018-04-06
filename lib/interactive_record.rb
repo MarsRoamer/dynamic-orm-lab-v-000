@@ -49,7 +49,7 @@ class InteractiveRecord
     # binding.pry
     sql = "SELECT * FROM #{self.table_name} WHERE (#{param.keys.to_s.gsub(":", "")}) = (#{param.values.join})"
     DB[:conn].execute(sql)
-# binding.pry
+binding.pry
   end
 
 end
