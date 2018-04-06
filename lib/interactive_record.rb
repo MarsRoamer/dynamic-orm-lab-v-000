@@ -36,7 +36,7 @@ class InteractiveRecord
   end
 
   def save
-
+binding.pry
   end
 
 end
