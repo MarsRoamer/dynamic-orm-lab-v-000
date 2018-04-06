@@ -46,7 +46,8 @@ class InteractiveRecord
   end
 
   def self.find_by(param)
-    binding.pry 
+    # sql = "SELECT * FROM #{self.table_name} (#{})"
+    binding.pry
   end
 
 end
