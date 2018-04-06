@@ -42,7 +42,7 @@ class InteractiveRecord
   end
 
   def self.find_by_name(name)
-    binding.pry
+  
     student = DB[:conn].execute("SELECT * FROM #{self.class.table_name_for_insert} WHERE name = ?", name)
 
   end
